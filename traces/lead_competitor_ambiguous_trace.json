@@ -107,7 +107,9 @@
         "Company appears to be a competing marketing agency.",
         "Outreach could reveal positioning or sales process to a competitor.",
         "Partnership intent is ambiguous."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     {
       "agent": "risk_skeptic_agent",
@@ -131,7 +133,9 @@
         "Company appears to be a competing marketing agency.",
         "Outreach could reveal positioning or sales process to a competitor.",
         "Partnership intent is ambiguous."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     }
   ],
   "resolution": {
@@ -161,7 +165,9 @@
         "Company appears to be a competing marketing agency.",
         "Outreach could reveal positioning or sales process to a competitor.",
         "Partnership intent is ambiguous."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     "dissenting_positions": [
       {
@@ -190,7 +196,9 @@
           "Company appears to be a competing marketing agency.",
           "Outreach could reveal positioning or sales process to a competitor.",
           "Partnership intent is ambiguous."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     ],
     "requires_human_review": true,
@@ -226,7 +234,7 @@
   },
   "trace": [
     {
-      "timestamp": "2026-06-11T20:55:37.049857Z",
+      "timestamp": "2026-06-11T21:27:24.504035Z",
       "actor": "orchestrator",
       "action": "intake_received",
       "summary": "Received inbound lead lead_competitor_ambiguous from website_form.",
@@ -238,7 +246,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:37.050207Z",
+      "timestamp": "2026-06-11T21:27:24.504173Z",
       "actor": "lead_intelligence_agent",
       "action": "lead_enriched_and_scored",
       "summary": "Enriched Daniel Reeves at BrightBridge Growth; proposed human_review with score 39/100 and confidence 0.57.",
@@ -313,7 +321,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:37.050226Z",
+      "timestamp": "2026-06-11T21:27:24.504198Z",
       "actor": "pursuit_advocate_agent",
       "action": "debate_position_submitted",
       "summary": "pursuit_advocate_agent recommended nurture with confidence 0.58.",
@@ -343,11 +351,13 @@
           "Company appears to be a competing marketing agency.",
           "Outreach could reveal positioning or sales process to a competitor.",
           "Partnership intent is ambiguous."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:37.050231Z",
+      "timestamp": "2026-06-11T21:27:24.504202Z",
       "actor": "risk_skeptic_agent",
       "action": "debate_position_submitted",
       "summary": "risk_skeptic_agent recommended human_review with confidence 0.9.",
@@ -373,11 +383,13 @@
           "Company appears to be a competing marketing agency.",
           "Outreach could reveal positioning or sales process to a competitor.",
           "Partnership intent is ambiguous."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:37.050253Z",
+      "timestamp": "2026-06-11T21:27:24.504222Z",
       "actor": "orchestrator",
       "action": "debate_resolved",
       "summary": "Resolved debate to human_review with confidence 0.73.",
@@ -409,7 +421,9 @@
               "Company appears to be a competing marketing agency.",
               "Outreach could reveal positioning or sales process to a competitor.",
               "Partnership intent is ambiguous."
-            ]
+            ],
+            "llm_provider": "mock",
+            "llm_model": "mock-llm-v1"
           },
           "dissenting_positions": [
             {
@@ -438,7 +452,9 @@
                 "Company appears to be a competing marketing agency.",
                 "Outreach could reveal positioning or sales process to a competitor.",
                 "Partnership intent is ambiguous."
-              ]
+              ],
+              "llm_provider": "mock",
+              "llm_model": "mock-llm-v1"
             }
           ],
           "requires_human_review": true,
@@ -455,7 +471,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:37.050257Z",
+      "timestamp": "2026-06-11T21:27:24.504225Z",
       "actor": "orchestrator",
       "action": "outreach_skipped",
       "summary": "Outreach was not drafted because final disposition was human_review.",
@@ -466,7 +482,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:37.050727Z",
+      "timestamp": "2026-06-11T21:27:24.504554Z",
       "actor": "crm_hygiene_agent",
       "action": "crm_record_upserted",
       "summary": "CRM record written with stage human_review and disposition human_review.",

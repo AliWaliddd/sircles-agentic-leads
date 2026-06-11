@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from sircles_agents.llm import LLMClient, MockLLMClient
 from sircles_agents.models import (
     AgentName,
     DebatePosition,
@@ -25,6 +26,9 @@ class PursuitAdvocateAgent:
     false skips: missing a lead that could become a multi-month retainer.
     """
 
+    def __init__(self, llm_client: LLMClient | None = None) -> None:
+        self._llm_client = llm_client or MockLLMClient()
+
     def run(self, lead_intelligence: LeadIntelligenceResult) -> DebatePosition:
         contact = lead_intelligence.contact
         company = lead_intelligence.company
@@ -33,7 +37,7 @@ class PursuitAdvocateAgent:
         if company.is_competing_agency:
             recommendation = Disposition.NURTURE
             confidence = 0.58
-            thesis = (
+            fallback_thesis = (
                 "There may be partnership or referral value, but the lead should "
                 "not receive normal sales outreach because the company appears to "
                 "be a competing agency."
@@ -41,24 +45,47 @@ class PursuitAdvocateAgent:
         elif score.total_score >= 75:
             recommendation = Disposition.PURSUE
             confidence = min(0.95, max(0.80, score.confidence + 0.05))
-            thesis = (
+            fallback_thesis = (
                 "This lead matches the ICP strongly enough to justify autonomous "
                 "first-touch outreach."
             )
         elif score.total_score >= 50:
             recommendation = Disposition.NURTURE
             confidence = max(0.60, score.confidence)
-            thesis = (
+            fallback_thesis = (
                 "The lead has enough upside to keep warm, but the current evidence "
                 "does not justify fully autonomous sales outreach."
             )
         else:
             recommendation = Disposition.NURTURE
             confidence = 0.42
-            thesis = (
+            fallback_thesis = (
                 "The lead is weak, but a low-cost nurture path avoids completely "
                 "discarding a possible future opportunity."
             )
+
+        llm_response = self._llm_client.complete(
+            prompt_name="pursuit_advocate_debate_position",
+            system_prompt=(
+                "You are the Pursuit Advocate in a sales lead qualification debate. "
+                "Argue the commercial upside, but stay grounded in the provided evidence."
+            ),
+            user_prompt=(
+                f"Lead: {contact.full_name} at {company.company_name}\n"
+                f"Role: {contact.role_title}\n"
+                f"Industry: {company.industry}\n"
+                f"Score: {score.total_score}\n"
+                f"Positive evidence: {score.positive_evidence}\n"
+                f"Negative evidence: {score.negative_evidence}\n"
+                f"Recommended disposition: {recommendation.value}"
+            ),
+            fallback=fallback_thesis,
+            metadata={
+                "lead_id": lead_intelligence.raw_lead.lead_id,
+                "agent": AgentName.PURSUIT_ADVOCATE.value,
+                "recommendation": recommendation.value,
+            },
+        )
 
         evidence_for = list(score.positive_evidence)
         if contact.evidence:
@@ -70,10 +97,12 @@ class PursuitAdvocateAgent:
             agent=AgentName.PURSUIT_ADVOCATE,
             recommendation=recommendation,
             confidence=round(confidence, 2),
-            thesis=thesis,
+            thesis=llm_response.text,
             evidence_for=evidence_for,
             evidence_against=list(score.negative_evidence),
             risk_notes=list(company.risk_signals),
+            llm_provider=llm_response.provider,
+            llm_model=llm_response.model,
         )
 
 
@@ -85,6 +114,9 @@ class RiskSkepticAgent:
     reputational damage, bad-fit outreach, and exposing process to competitors.
     """
 
+    def __init__(self, llm_client: LLMClient | None = None) -> None:
+        self._llm_client = llm_client or MockLLMClient()
+
     def run(self, lead_intelligence: LeadIntelligenceResult) -> DebatePosition:
         contact = lead_intelligence.contact
         company = lead_intelligence.company
@@ -93,7 +125,7 @@ class RiskSkepticAgent:
         if company.is_competing_agency:
             recommendation = Disposition.HUMAN_REVIEW
             confidence = 0.90
-            thesis = (
+            fallback_thesis = (
                 "This should be reviewed by a human because the company appears "
                 "to be a competing agency and the inquiry may be partnership, "
                 "research, or competitive intelligence rather than buying intent."
@@ -101,21 +133,21 @@ class RiskSkepticAgent:
         elif score.total_score <= 30:
             recommendation = Disposition.SKIP
             confidence = max(0.85, score.confidence)
-            thesis = (
+            fallback_thesis = (
                 "The lead is far outside the retainer ICP, so pursuing it would "
                 "likely waste SDR time."
             )
         elif score.breakdown.risk_penalty <= -14:
             recommendation = Disposition.HUMAN_REVIEW
             confidence = max(0.70, score.confidence)
-            thesis = (
+            fallback_thesis = (
                 "The lead has commercial upside, but risk signals are strong "
                 "enough that a human should review before any outreach."
             )
         elif score.total_score >= 75:
             recommendation = Disposition.NURTURE
             confidence = 0.52
-            thesis = (
+            fallback_thesis = (
                 "The lead is attractive, but the safer opposing position is to "
                 "verify the opportunity before outreach. This creates a real "
                 "challenge for the resolver rather than rubber-stamping pursuit."
@@ -123,17 +155,41 @@ class RiskSkepticAgent:
         elif score.total_score >= 50:
             recommendation = Disposition.HUMAN_REVIEW
             confidence = max(0.65, score.confidence)
-            thesis = (
+            fallback_thesis = (
                 "The lead is plausible but has enough uncertainty around budget, "
                 "timing, or urgency that autonomous outreach may be premature."
             )
         else:
             recommendation = Disposition.SKIP
             confidence = 0.75
-            thesis = (
+            fallback_thesis = (
                 "The lead does not show enough evidence of fit, budget, or buying "
                 "intent to justify sales follow-up."
             )
+
+        llm_response = self._llm_client.complete(
+            prompt_name="risk_skeptic_debate_position",
+            system_prompt=(
+                "You are the Risk Skeptic in a sales lead qualification debate. "
+                "Argue the downside risk, reputation risk, and uncertainty, while "
+                "staying grounded in the provided evidence."
+            ),
+            user_prompt=(
+                f"Lead: {contact.full_name} at {company.company_name}\n"
+                f"Role: {contact.role_title}\n"
+                f"Industry: {company.industry}\n"
+                f"Score: {score.total_score}\n"
+                f"Risk signals: {company.risk_signals}\n"
+                f"Uncertainty: {score.uncertainty}\n"
+                f"Recommended disposition: {recommendation.value}"
+            ),
+            fallback=fallback_thesis,
+            metadata={
+                "lead_id": lead_intelligence.raw_lead.lead_id,
+                "agent": AgentName.RISK_SKEPTIC.value,
+                "recommendation": recommendation.value,
+            },
+        )
 
         evidence_against = list(score.negative_evidence)
         if score.uncertainty:
@@ -143,15 +199,18 @@ class RiskSkepticAgent:
             agent=AgentName.RISK_SKEPTIC,
             recommendation=recommendation,
             confidence=round(confidence, 2),
-            thesis=thesis,
+            thesis=llm_response.text,
             evidence_for=evidence_against,
             evidence_against=list(score.positive_evidence),
             risk_notes=list(company.risk_signals),
+            llm_provider=llm_response.provider,
+            llm_model=llm_response.model,
         )
 
 
 def run_disposition_debate(
     lead_intelligence: LeadIntelligenceResult,
+    llm_client: LLMClient | None = None,
 ) -> list[DebatePosition]:
     """
     Run the required debate before any consequential outreach action.
@@ -160,12 +219,14 @@ def run_disposition_debate(
     - Pursuit Advocate argues the upside case.
     - Risk Skeptic argues the caution case.
 
-    This creates genuine competing recommendations instead of one agent simply
-    agreeing with itself.
+    The LLM client is mocked by default so the project is reproducible without
+    API keys, but the interface can be replaced by a real provider.
     """
+    client = llm_client or MockLLMClient()
+
     return [
-        PursuitAdvocateAgent().run(lead_intelligence),
-        RiskSkepticAgent().run(lead_intelligence),
+        PursuitAdvocateAgent(llm_client=client).run(lead_intelligence),
+        RiskSkepticAgent(llm_client=client).run(lead_intelligence),
     ]
 
 

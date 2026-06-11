@@ -104,7 +104,9 @@
       "risk_notes": [
         "Small team may not have retainer budget.",
         "Buying intent is exploratory rather than urgent."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     {
       "agent": "risk_skeptic_agent",
@@ -126,7 +128,9 @@
       "risk_notes": [
         "Small team may not have retainer budget.",
         "Buying intent is exploratory rather than urgent."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     }
   ],
   "resolution": {
@@ -158,7 +162,9 @@
       "risk_notes": [
         "Small team may not have retainer budget.",
         "Buying intent is exploratory rather than urgent."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     "dissenting_positions": [
       {
@@ -181,7 +187,9 @@
         "risk_notes": [
           "Small team may not have retainer budget.",
           "Buying intent is exploratory rather than urgent."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     ],
     "requires_human_review": false,
@@ -216,7 +224,7 @@
   },
   "trace": [
     {
-      "timestamp": "2026-06-11T18:23:41.721013Z",
+      "timestamp": "2026-06-11T21:27:24.503265Z",
       "actor": "orchestrator",
       "action": "intake_received",
       "summary": "Received inbound lead lead_ecommerce_nurture from linkedin_inbound.",
@@ -228,7 +236,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.721180Z",
+      "timestamp": "2026-06-11T21:27:24.503433Z",
       "actor": "lead_intelligence_agent",
       "action": "lead_enriched_and_scored",
       "summary": "Enriched Lina Park at GlowCart; proposed nurture with score 55/100 and confidence 0.69.",
@@ -302,7 +310,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.721196Z",
+      "timestamp": "2026-06-11T21:27:24.503463Z",
       "actor": "pursuit_advocate_agent",
       "action": "debate_position_submitted",
       "summary": "pursuit_advocate_agent recommended nurture with confidence 0.69.",
@@ -330,11 +338,13 @@
         "risk_notes": [
           "Small team may not have retainer budget.",
           "Buying intent is exploratory rather than urgent."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.721202Z",
+      "timestamp": "2026-06-11T21:27:24.503470Z",
       "actor": "risk_skeptic_agent",
       "action": "debate_position_submitted",
       "summary": "risk_skeptic_agent recommended human_review with confidence 0.7.",
@@ -358,11 +368,13 @@
         "risk_notes": [
           "Small team may not have retainer budget.",
           "Buying intent is exploratory rather than urgent."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.721219Z",
+      "timestamp": "2026-06-11T21:27:24.503488Z",
       "actor": "orchestrator",
       "action": "debate_resolved",
       "summary": "Resolved debate to nurture with confidence 0.69.",
@@ -396,7 +408,9 @@
             "risk_notes": [
               "Small team may not have retainer budget.",
               "Buying intent is exploratory rather than urgent."
-            ]
+            ],
+            "llm_provider": "mock",
+            "llm_model": "mock-llm-v1"
           },
           "dissenting_positions": [
             {
@@ -419,7 +433,9 @@
               "risk_notes": [
                 "Small team may not have retainer budget.",
                 "Buying intent is exploratory rather than urgent."
-              ]
+              ],
+              "llm_provider": "mock",
+              "llm_model": "mock-llm-v1"
             }
           ],
           "requires_human_review": false,
@@ -436,7 +452,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.721222Z",
+      "timestamp": "2026-06-11T21:27:24.503491Z",
       "actor": "orchestrator",
       "action": "outreach_skipped",
       "summary": "Outreach was not drafted because final disposition was nurture.",
@@ -447,7 +463,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.721537Z",
+      "timestamp": "2026-06-11T21:27:24.503756Z",
       "actor": "crm_hygiene_agent",
       "action": "crm_record_upserted",
       "summary": "CRM record written with stage nurture and disposition nurture.",

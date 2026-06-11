@@ -197,6 +197,8 @@ class DebatePosition(BaseModel):
     evidence_for: list[str] = Field(default_factory=list)
     evidence_against: list[str] = Field(default_factory=list)
     risk_notes: list[str] = Field(default_factory=list)
+    llm_provider: str | None = None
+    llm_model: str | None = None
 
 
 class ResolutionDecision(BaseModel):
@@ -233,6 +235,8 @@ class OutreachArtifact(BaseModel):
     email_body: str
     linkedin_note: str
     grounded_in: list[str] = Field(default_factory=list)
+    llm_provider: str | None = None
+    llm_model: str | None = None
 
 
 class CRMRecord(BaseModel):

@@ -54,7 +54,7 @@ If this worked well, I would next automate follow-up sequencing for qualified bu
 
 ## Tradeoffs made
 
-I used deterministic mocked agents instead of live LLM calls. This makes the project easier to run, test, and defend without API keys. The downside is that the natural language generation and judgment are less flexible than a real LLM-based system. However, the architecture keeps clear boundaries, so a real LLM could later replace the internal logic of individual agents without changing the orchestration contract.
+I used a deterministic mock LLM client instead of live LLM API calls. This makes the project easier to run, test, and defend without API keys. The downside is that the natural language generation and judgment are less flexible than a real LLM-based system. However, the architecture keeps a clear LLM interface, so a real provider could later replace the mock client without changing the agent contracts.
 
 I also used a simple scoring rubric rather than a complex machine-learning model. This is appropriate for the take-home because the goal is to demonstrate business reasoning, debate, handoffs, and traceability, not to optimize a black-box predictor.
 
@@ -65,7 +65,7 @@ With more time, I would add:
 1. A human-review dashboard showing the lead, debate positions, evidence, and recommended action.
 2. Outcome tracking so the scoring weights can be adjusted based on real conversion data.
 3. More realistic enrichment uncertainty, including conflicting data from multiple providers.
-4. LLM-generated outreach with strict grounding checks and tone controls.
+4. Provider-backed LLM outreach with stricter grounding checks, tone controls, and evaluation against real examples.
 5. Integration tests around a larger fixture set covering edge cases such as vendors, job seekers, existing customers, and strategic partners.
 6. A feedback loop where human overrides are recorded and used to improve future resolution rules.
 

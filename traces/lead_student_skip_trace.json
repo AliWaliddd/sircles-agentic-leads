@@ -100,7 +100,9 @@
         "No evidence of company budget.",
         "Not a qualified business lead.",
         "Request appears to be free advice rather than agency buying intent."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     {
       "agent": "risk_skeptic_agent",
@@ -123,7 +125,9 @@
         "No evidence of company budget.",
         "Not a qualified business lead.",
         "Request appears to be free advice rather than agency buying intent."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     }
   ],
   "resolution": {
@@ -152,7 +156,9 @@
         "No evidence of company budget.",
         "Not a qualified business lead.",
         "Request appears to be free advice rather than agency buying intent."
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     "dissenting_positions": [
       {
@@ -178,7 +184,9 @@
           "No evidence of company budget.",
           "Not a qualified business lead.",
           "Request appears to be free advice rather than agency buying intent."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     ],
     "requires_human_review": false,
@@ -213,7 +221,7 @@
   },
   "trace": [
     {
-      "timestamp": "2026-06-11T18:23:41.720125Z",
+      "timestamp": "2026-06-11T21:27:24.502013Z",
       "actor": "orchestrator",
       "action": "intake_received",
       "summary": "Received inbound lead lead_student_skip from website_form.",
@@ -225,7 +233,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.720365Z",
+      "timestamp": "2026-06-11T21:27:24.502256Z",
       "actor": "lead_intelligence_agent",
       "action": "lead_enriched_and_scored",
       "summary": "Enriched Omar Nasser at Omar Portfolio; proposed skip with score 0/100 and confidence 0.84.",
@@ -296,7 +304,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.720383Z",
+      "timestamp": "2026-06-11T21:27:24.502288Z",
       "actor": "pursuit_advocate_agent",
       "action": "debate_position_submitted",
       "summary": "pursuit_advocate_agent recommended nurture with confidence 0.42.",
@@ -323,11 +331,13 @@
           "No evidence of company budget.",
           "Not a qualified business lead.",
           "Request appears to be free advice rather than agency buying intent."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.720389Z",
+      "timestamp": "2026-06-11T21:27:24.502293Z",
       "actor": "risk_skeptic_agent",
       "action": "debate_position_submitted",
       "summary": "risk_skeptic_agent recommended skip with confidence 0.85.",
@@ -352,11 +362,13 @@
           "No evidence of company budget.",
           "Not a qualified business lead.",
           "Request appears to be free advice rather than agency buying intent."
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.720410Z",
+      "timestamp": "2026-06-11T21:27:24.502311Z",
       "actor": "orchestrator",
       "action": "debate_resolved",
       "summary": "Resolved debate to skip with confidence 0.84.",
@@ -387,7 +399,9 @@
               "No evidence of company budget.",
               "Not a qualified business lead.",
               "Request appears to be free advice rather than agency buying intent."
-            ]
+            ],
+            "llm_provider": "mock",
+            "llm_model": "mock-llm-v1"
           },
           "dissenting_positions": [
             {
@@ -413,7 +427,9 @@
                 "No evidence of company budget.",
                 "Not a qualified business lead.",
                 "Request appears to be free advice rather than agency buying intent."
-              ]
+              ],
+              "llm_provider": "mock",
+              "llm_model": "mock-llm-v1"
             }
           ],
           "requires_human_review": false,
@@ -430,7 +446,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.720413Z",
+      "timestamp": "2026-06-11T21:27:24.502314Z",
       "actor": "orchestrator",
       "action": "outreach_skipped",
       "summary": "Outreach was not drafted because final disposition was skip.",
@@ -441,7 +457,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T18:23:41.720786Z",
+      "timestamp": "2026-06-11T21:27:24.502625Z",
       "actor": "crm_hygiene_agent",
       "action": "crm_record_upserted",
       "summary": "CRM record written with stage disqualified and disposition skip.",

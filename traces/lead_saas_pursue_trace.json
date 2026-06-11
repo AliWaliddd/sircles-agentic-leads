@@ -94,7 +94,9 @@
         "Growth-stage context creates urgency."
       ],
       "evidence_against": [],
-      "risk_notes": []
+      "risk_notes": [],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     {
       "agent": "risk_skeptic_agent",
@@ -109,7 +111,9 @@
         "Contact has strong buyer fit: VP of Growth scored 19/20.",
         "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
       ],
-      "risk_notes": []
+      "risk_notes": [],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     }
   ],
   "resolution": {
@@ -136,7 +140,9 @@
         "Growth-stage context creates urgency."
       ],
       "evidence_against": [],
-      "risk_notes": []
+      "risk_notes": [],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     },
     "dissenting_positions": [
       {
@@ -152,7 +158,9 @@
           "Contact has strong buyer fit: VP of Growth scored 19/20.",
           "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
         ],
-        "risk_notes": []
+        "risk_notes": [],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     ],
     "requires_human_review": false,
@@ -169,7 +177,9 @@
       "Growth signal: Expanding into two new markets.",
       "Pain signal: Needs positioning support.",
       "Resolved disposition: pursue"
-    ]
+    ],
+    "llm_provider": "mock",
+    "llm_model": "mock-llm-v1"
   },
   "crm_record": {
     "lead_id": "lead_saas_pursue",
@@ -204,12 +214,14 @@
         "Growth signal: Expanding into two new markets.",
         "Pain signal: Needs positioning support.",
         "Resolved disposition: pursue"
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     }
   },
   "trace": [
     {
-      "timestamp": "2026-06-11T20:55:36.883598Z",
+      "timestamp": "2026-06-11T21:27:24.500366Z",
       "actor": "orchestrator",
       "action": "intake_received",
       "summary": "Received inbound lead lead_saas_pursue from website_form.",
@@ -221,7 +233,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:36.884110Z",
+      "timestamp": "2026-06-11T21:27:24.500793Z",
       "actor": "lead_intelligence_agent",
       "action": "lead_enriched_and_scored",
       "summary": "Enriched Maya Chen at Northstar Analytics; proposed pursue with score 99/100 and confidence 0.88.",
@@ -290,7 +302,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:36.884130Z",
+      "timestamp": "2026-06-11T21:27:24.500831Z",
       "actor": "pursuit_advocate_agent",
       "action": "debate_position_submitted",
       "summary": "pursuit_advocate_agent recommended pursue with confidence 0.93.",
@@ -313,11 +325,13 @@
           "Growth-stage context creates urgency."
         ],
         "evidence_against": [],
-        "risk_notes": []
+        "risk_notes": [],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:36.884135Z",
+      "timestamp": "2026-06-11T21:27:24.500836Z",
       "actor": "risk_skeptic_agent",
       "action": "debate_position_submitted",
       "summary": "risk_skeptic_agent recommended nurture with confidence 0.52.",
@@ -334,11 +348,13 @@
           "Contact has strong buyer fit: VP of Growth scored 19/20.",
           "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
         ],
-        "risk_notes": []
+        "risk_notes": [],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:36.884155Z",
+      "timestamp": "2026-06-11T21:27:24.500859Z",
       "actor": "orchestrator",
       "action": "debate_resolved",
       "summary": "Resolved debate to pursue with confidence 0.91.",
@@ -367,7 +383,9 @@
               "Growth-stage context creates urgency."
             ],
             "evidence_against": [],
-            "risk_notes": []
+            "risk_notes": [],
+            "llm_provider": "mock",
+            "llm_model": "mock-llm-v1"
           },
           "dissenting_positions": [
             {
@@ -383,7 +401,9 @@
                 "Contact has strong buyer fit: VP of Growth scored 19/20.",
                 "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
               ],
-              "risk_notes": []
+              "risk_notes": [],
+              "llm_provider": "mock",
+              "llm_model": "mock-llm-v1"
             }
           ],
           "requires_human_review": false,
@@ -400,7 +420,7 @@
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:36.884168Z",
+      "timestamp": "2026-06-11T21:27:24.500883Z",
       "actor": "sdr_outreach_agent",
       "action": "outreach_drafted",
       "summary": "Drafted first-touch email and LinkedIn note because the final disposition was pursue.",
@@ -415,11 +435,13 @@
           "Growth signal: Expanding into two new markets.",
           "Pain signal: Needs positioning support.",
           "Resolved disposition: pursue"
-        ]
+        ],
+        "llm_provider": "mock",
+        "llm_model": "mock-llm-v1"
       }
     },
     {
-      "timestamp": "2026-06-11T20:55:36.884634Z",
+      "timestamp": "2026-06-11T21:27:24.501250Z",
       "actor": "crm_hygiene_agent",
       "action": "crm_record_upserted",
       "summary": "CRM record written with stage qualified and disposition pursue.",
@@ -456,7 +478,9 @@
             "Growth signal: Expanding into two new markets.",
             "Pain signal: Needs positioning support.",
             "Resolved disposition: pursue"
-          ]
+          ],
+          "llm_provider": "mock",
+          "llm_model": "mock-llm-v1"
         }
       }
     }

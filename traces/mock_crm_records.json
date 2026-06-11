@@ -32,7 +32,9 @@
         "Growth signal: Expanding into two new markets.",
         "Pain signal: Needs positioning support.",
         "Resolved disposition: pursue"
-      ]
+      ],
+      "llm_provider": "mock",
+      "llm_model": "mock-llm-v1"
     }
   },
   {
