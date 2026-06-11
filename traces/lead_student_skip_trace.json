@@ -1,0 +1,476 @@
+{
+  "lead_id": "lead_student_skip",
+  "final_disposition": "skip",
+  "lead_intelligence": {
+    "raw_lead": {
+      "lead_id": "lead_student_skip",
+      "first_name": "Omar",
+      "last_name": "Nasser",
+      "email": "omar.nasser@example.com",
+      "company_name": "Omar Portfolio",
+      "role_title": "Student",
+      "source": "website_form",
+      "message": "I am building my personal portfolio and wanted free advice on how to get more followers."
+    },
+    "contact": {
+      "lead_id": "lead_student_skip",
+      "full_name": "Omar Nasser",
+      "email": "omar.nasser@example.com",
+      "role_title": "Student",
+      "seniority": "individual",
+      "buyer_fit_score": 10,
+      "linkedin_url": null,
+      "evidence": [
+        "Student role is not a likely buyer for a marketing agency retainer.",
+        "Message asks for free personal portfolio advice.",
+        "No company budget or commercial buying signal is present."
+      ]
+    },
+    "company": {
+      "company_name": "Omar Portfolio",
+      "website": null,
+      "industry": "Personal portfolio",
+      "employee_count": 1,
+      "estimated_annual_revenue": null,
+      "geography": "Egypt",
+      "growth_signals": [],
+      "pain_signals": [
+        "Wants more followers for a personal portfolio."
+      ],
+      "risk_signals": [
+        "No evidence of company budget.",
+        "Not a qualified business lead.",
+        "Request appears to be free advice rather than agency buying intent."
+      ],
+      "is_competing_agency": false,
+      "evidence": [
+        "Personal/student lead does not match retainer ICP.",
+        "No company website, budget, or commercial buying trigger found."
+      ]
+    },
+    "score": {
+      "total_score": 0,
+      "confidence": 0.84,
+      "proposed_disposition": "skip",
+      "breakdown": {
+        "industry_fit": 0,
+        "company_size_budget": 0,
+        "growth_signal": 0,
+        "buyer_fit": 2,
+        "pain_signal": 7,
+        "risk_penalty": -21
+      },
+      "positive_evidence": [
+        "Pain signals found: Wants more followers for a personal portfolio."
+      ],
+      "negative_evidence": [
+        "Contact role has weak buyer fit: Student.",
+        "Company appears too small to be a qualified agency retainer lead.",
+        "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+        "Risk penalty applied: -21 points."
+      ],
+      "uncertainty": [
+        "No company website was available in enrichment.",
+        "Revenue estimate is unavailable.",
+        "No clear growth trigger was found."
+      ]
+    }
+  },
+  "debate_positions": [
+    {
+      "agent": "pursuit_advocate_agent",
+      "recommendation": "nurture",
+      "confidence": 0.42,
+      "thesis": "The lead is weak, but a low-cost nurture path avoids completely discarding a possible future opportunity.",
+      "evidence_for": [
+        "Pain signals found: Wants more followers for a personal portfolio.",
+        "Student role is not a likely buyer for a marketing agency retainer.",
+        "Message asks for free personal portfolio advice.",
+        "No company budget or commercial buying signal is present.",
+        "Personal/student lead does not match retainer ICP.",
+        "No company website, budget, or commercial buying trigger found."
+      ],
+      "evidence_against": [
+        "Contact role has weak buyer fit: Student.",
+        "Company appears too small to be a qualified agency retainer lead.",
+        "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+        "Risk penalty applied: -21 points."
+      ],
+      "risk_notes": [
+        "No evidence of company budget.",
+        "Not a qualified business lead.",
+        "Request appears to be free advice rather than agency buying intent."
+      ]
+    },
+    {
+      "agent": "risk_skeptic_agent",
+      "recommendation": "skip",
+      "confidence": 0.85,
+      "thesis": "The lead is far outside the retainer ICP, so pursuing it would likely waste SDR time.",
+      "evidence_for": [
+        "Contact role has weak buyer fit: Student.",
+        "Company appears too small to be a qualified agency retainer lead.",
+        "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+        "Risk penalty applied: -21 points.",
+        "No company website was available in enrichment.",
+        "Revenue estimate is unavailable.",
+        "No clear growth trigger was found."
+      ],
+      "evidence_against": [
+        "Pain signals found: Wants more followers for a personal portfolio."
+      ],
+      "risk_notes": [
+        "No evidence of company budget.",
+        "Not a qualified business lead.",
+        "Request appears to be free advice rather than agency buying intent."
+      ]
+    }
+  ],
+  "resolution": {
+    "final_disposition": "skip",
+    "confidence": 0.84,
+    "resolution_rule": "Confidence-weighted arbitration with hard risk vetoes: competitor/conflict risk or low confidence escalates to human review; clear high-score, high-confidence leads can be pursued; clear poor-fit leads are skipped; moderate-fit leads are nurtured.",
+    "rationale": "The lead is a clear poor fit with high confidence. The cost of a false pursue is higher than the small chance of future opportunity.",
+    "winning_position": {
+      "agent": "risk_skeptic_agent",
+      "recommendation": "skip",
+      "confidence": 0.85,
+      "thesis": "The lead is far outside the retainer ICP, so pursuing it would likely waste SDR time.",
+      "evidence_for": [
+        "Contact role has weak buyer fit: Student.",
+        "Company appears too small to be a qualified agency retainer lead.",
+        "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+        "Risk penalty applied: -21 points.",
+        "No company website was available in enrichment.",
+        "Revenue estimate is unavailable.",
+        "No clear growth trigger was found."
+      ],
+      "evidence_against": [
+        "Pain signals found: Wants more followers for a personal portfolio."
+      ],
+      "risk_notes": [
+        "No evidence of company budget.",
+        "Not a qualified business lead.",
+        "Request appears to be free advice rather than agency buying intent."
+      ]
+    },
+    "dissenting_positions": [
+      {
+        "agent": "pursuit_advocate_agent",
+        "recommendation": "nurture",
+        "confidence": 0.42,
+        "thesis": "The lead is weak, but a low-cost nurture path avoids completely discarding a possible future opportunity.",
+        "evidence_for": [
+          "Pain signals found: Wants more followers for a personal portfolio.",
+          "Student role is not a likely buyer for a marketing agency retainer.",
+          "Message asks for free personal portfolio advice.",
+          "No company budget or commercial buying signal is present.",
+          "Personal/student lead does not match retainer ICP.",
+          "No company website, budget, or commercial buying trigger found."
+        ],
+        "evidence_against": [
+          "Contact role has weak buyer fit: Student.",
+          "Company appears too small to be a qualified agency retainer lead.",
+          "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+          "Risk penalty applied: -21 points."
+        ],
+        "risk_notes": [
+          "No evidence of company budget.",
+          "Not a qualified business lead.",
+          "Request appears to be free advice rather than agency buying intent."
+        ]
+      }
+    ],
+    "requires_human_review": false,
+    "human_review_reason": null
+  },
+  "outreach": null,
+  "crm_record": {
+    "lead_id": "lead_student_skip",
+    "contact_name": "Omar Nasser",
+    "email": "omar.nasser@example.com",
+    "company_name": "Omar Portfolio",
+    "role_title": "Student",
+    "disposition": "skip",
+    "deal_stage": "disqualified",
+    "score": 0,
+    "confidence": 0.84,
+    "human_review_flag": false,
+    "human_review_reason": null,
+    "notes": [
+      "Lead score: 0/100.",
+      "Lead Intelligence proposed: skip with confidence 0.84.",
+      "Final resolution: skip with confidence 0.84.",
+      "Resolution rationale: The lead is a clear poor fit with high confidence. The cost of a false pursue is higher than the small chance of future opportunity.",
+      "Winning debate position: risk_skeptic_agent recommended skip with confidence 0.85.",
+      "Recorded dissent: pursuit_advocate_agent recommended nurture with confidence 0.42.",
+      "Positive evidence: Pain signals found: Wants more followers for a personal portfolio.",
+      "Negative evidence: Contact role has weak buyer fit: Student. | Company appears too small to be a qualified agency retainer lead. | Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+      "Uncertainty: No company website was available in enrichment. | Revenue estimate is unavailable. | No clear growth trigger was found.",
+      "No outreach drafted because final disposition was not pursue."
+    ],
+    "outreach": null
+  },
+  "trace": [
+    {
+      "timestamp": "2026-06-11T18:23:41.720125Z",
+      "actor": "orchestrator",
+      "action": "intake_received",
+      "summary": "Received inbound lead lead_student_skip from website_form.",
+      "data": {
+        "lead_id": "lead_student_skip",
+        "company_name": "Omar Portfolio",
+        "role_title": "Student",
+        "message": "I am building my personal portfolio and wanted free advice on how to get more followers."
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.720365Z",
+      "actor": "lead_intelligence_agent",
+      "action": "lead_enriched_and_scored",
+      "summary": "Enriched Omar Nasser at Omar Portfolio; proposed skip with score 0/100 and confidence 0.84.",
+      "data": {
+        "contact": {
+          "lead_id": "lead_student_skip",
+          "full_name": "Omar Nasser",
+          "email": "omar.nasser@example.com",
+          "role_title": "Student",
+          "seniority": "individual",
+          "buyer_fit_score": 10,
+          "linkedin_url": null,
+          "evidence": [
+            "Student role is not a likely buyer for a marketing agency retainer.",
+            "Message asks for free personal portfolio advice.",
+            "No company budget or commercial buying signal is present."
+          ]
+        },
+        "company": {
+          "company_name": "Omar Portfolio",
+          "website": null,
+          "industry": "Personal portfolio",
+          "employee_count": 1,
+          "estimated_annual_revenue": null,
+          "geography": "Egypt",
+          "growth_signals": [],
+          "pain_signals": [
+            "Wants more followers for a personal portfolio."
+          ],
+          "risk_signals": [
+            "No evidence of company budget.",
+            "Not a qualified business lead.",
+            "Request appears to be free advice rather than agency buying intent."
+          ],
+          "is_competing_agency": false,
+          "evidence": [
+            "Personal/student lead does not match retainer ICP.",
+            "No company website, budget, or commercial buying trigger found."
+          ]
+        },
+        "score": {
+          "total_score": 0,
+          "confidence": 0.84,
+          "proposed_disposition": "skip",
+          "breakdown": {
+            "industry_fit": 0,
+            "company_size_budget": 0,
+            "growth_signal": 0,
+            "buyer_fit": 2,
+            "pain_signal": 7,
+            "risk_penalty": -21
+          },
+          "positive_evidence": [
+            "Pain signals found: Wants more followers for a personal portfolio."
+          ],
+          "negative_evidence": [
+            "Contact role has weak buyer fit: Student.",
+            "Company appears too small to be a qualified agency retainer lead.",
+            "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+            "Risk penalty applied: -21 points."
+          ],
+          "uncertainty": [
+            "No company website was available in enrichment.",
+            "Revenue estimate is unavailable.",
+            "No clear growth trigger was found."
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.720383Z",
+      "actor": "pursuit_advocate_agent",
+      "action": "debate_position_submitted",
+      "summary": "pursuit_advocate_agent recommended nurture with confidence 0.42.",
+      "data": {
+        "agent": "pursuit_advocate_agent",
+        "recommendation": "nurture",
+        "confidence": 0.42,
+        "thesis": "The lead is weak, but a low-cost nurture path avoids completely discarding a possible future opportunity.",
+        "evidence_for": [
+          "Pain signals found: Wants more followers for a personal portfolio.",
+          "Student role is not a likely buyer for a marketing agency retainer.",
+          "Message asks for free personal portfolio advice.",
+          "No company budget or commercial buying signal is present.",
+          "Personal/student lead does not match retainer ICP.",
+          "No company website, budget, or commercial buying trigger found."
+        ],
+        "evidence_against": [
+          "Contact role has weak buyer fit: Student.",
+          "Company appears too small to be a qualified agency retainer lead.",
+          "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+          "Risk penalty applied: -21 points."
+        ],
+        "risk_notes": [
+          "No evidence of company budget.",
+          "Not a qualified business lead.",
+          "Request appears to be free advice rather than agency buying intent."
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.720389Z",
+      "actor": "risk_skeptic_agent",
+      "action": "debate_position_submitted",
+      "summary": "risk_skeptic_agent recommended skip with confidence 0.85.",
+      "data": {
+        "agent": "risk_skeptic_agent",
+        "recommendation": "skip",
+        "confidence": 0.85,
+        "thesis": "The lead is far outside the retainer ICP, so pursuing it would likely waste SDR time.",
+        "evidence_for": [
+          "Contact role has weak buyer fit: Student.",
+          "Company appears too small to be a qualified agency retainer lead.",
+          "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+          "Risk penalty applied: -21 points.",
+          "No company website was available in enrichment.",
+          "Revenue estimate is unavailable.",
+          "No clear growth trigger was found."
+        ],
+        "evidence_against": [
+          "Pain signals found: Wants more followers for a personal portfolio."
+        ],
+        "risk_notes": [
+          "No evidence of company budget.",
+          "Not a qualified business lead.",
+          "Request appears to be free advice rather than agency buying intent."
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.720410Z",
+      "actor": "orchestrator",
+      "action": "debate_resolved",
+      "summary": "Resolved debate to skip with confidence 0.84.",
+      "data": {
+        "resolution": {
+          "final_disposition": "skip",
+          "confidence": 0.84,
+          "resolution_rule": "Confidence-weighted arbitration with hard risk vetoes: competitor/conflict risk or low confidence escalates to human review; clear high-score, high-confidence leads can be pursued; clear poor-fit leads are skipped; moderate-fit leads are nurtured.",
+          "rationale": "The lead is a clear poor fit with high confidence. The cost of a false pursue is higher than the small chance of future opportunity.",
+          "winning_position": {
+            "agent": "risk_skeptic_agent",
+            "recommendation": "skip",
+            "confidence": 0.85,
+            "thesis": "The lead is far outside the retainer ICP, so pursuing it would likely waste SDR time.",
+            "evidence_for": [
+              "Contact role has weak buyer fit: Student.",
+              "Company appears too small to be a qualified agency retainer lead.",
+              "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+              "Risk penalty applied: -21 points.",
+              "No company website was available in enrichment.",
+              "Revenue estimate is unavailable.",
+              "No clear growth trigger was found."
+            ],
+            "evidence_against": [
+              "Pain signals found: Wants more followers for a personal portfolio."
+            ],
+            "risk_notes": [
+              "No evidence of company budget.",
+              "Not a qualified business lead.",
+              "Request appears to be free advice rather than agency buying intent."
+            ]
+          },
+          "dissenting_positions": [
+            {
+              "agent": "pursuit_advocate_agent",
+              "recommendation": "nurture",
+              "confidence": 0.42,
+              "thesis": "The lead is weak, but a low-cost nurture path avoids completely discarding a possible future opportunity.",
+              "evidence_for": [
+                "Pain signals found: Wants more followers for a personal portfolio.",
+                "Student role is not a likely buyer for a marketing agency retainer.",
+                "Message asks for free personal portfolio advice.",
+                "No company budget or commercial buying signal is present.",
+                "Personal/student lead does not match retainer ICP.",
+                "No company website, budget, or commercial buying trigger found."
+              ],
+              "evidence_against": [
+                "Contact role has weak buyer fit: Student.",
+                "Company appears too small to be a qualified agency retainer lead.",
+                "Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+                "Risk penalty applied: -21 points."
+              ],
+              "risk_notes": [
+                "No evidence of company budget.",
+                "Not a qualified business lead.",
+                "Request appears to be free advice rather than agency buying intent."
+              ]
+            }
+          ],
+          "requires_human_review": false,
+          "human_review_reason": null
+        },
+        "recorded_dissent": [
+          {
+            "agent": "pursuit_advocate_agent",
+            "recommendation": "nurture",
+            "confidence": 0.42,
+            "thesis": "The lead is weak, but a low-cost nurture path avoids completely discarding a possible future opportunity."
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.720413Z",
+      "actor": "orchestrator",
+      "action": "outreach_skipped",
+      "summary": "Outreach was not drafted because final disposition was skip.",
+      "data": {
+        "final_disposition": "skip",
+        "requires_human_review": false,
+        "human_review_reason": null
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.720786Z",
+      "actor": "crm_hygiene_agent",
+      "action": "crm_record_upserted",
+      "summary": "CRM record written with stage disqualified and disposition skip.",
+      "data": {
+        "lead_id": "lead_student_skip",
+        "contact_name": "Omar Nasser",
+        "email": "omar.nasser@example.com",
+        "company_name": "Omar Portfolio",
+        "role_title": "Student",
+        "disposition": "skip",
+        "deal_stage": "disqualified",
+        "score": 0,
+        "confidence": 0.84,
+        "human_review_flag": false,
+        "human_review_reason": null,
+        "notes": [
+          "Lead score: 0/100.",
+          "Lead Intelligence proposed: skip with confidence 0.84.",
+          "Final resolution: skip with confidence 0.84.",
+          "Resolution rationale: The lead is a clear poor fit with high confidence. The cost of a false pursue is higher than the small chance of future opportunity.",
+          "Winning debate position: risk_skeptic_agent recommended skip with confidence 0.85.",
+          "Recorded dissent: pursuit_advocate_agent recommended nurture with confidence 0.42.",
+          "Positive evidence: Pain signals found: Wants more followers for a personal portfolio.",
+          "Negative evidence: Contact role has weak buyer fit: Student. | Company appears too small to be a qualified agency retainer lead. | Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+          "Uncertainty: No company website was available in enrichment. | Revenue estimate is unavailable. | No clear growth trigger was found.",
+          "No outreach drafted because final disposition was not pursue."
+        ],
+        "outreach": null
+      }
+    }
+  ]
+}

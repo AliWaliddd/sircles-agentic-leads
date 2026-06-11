@@ -1,0 +1,201 @@
+{
+  "raw_leads": [
+    {
+      "lead_id": "lead_saas_pursue",
+      "first_name": "Maya",
+      "last_name": "Chen",
+      "email": "maya.chen@northstaranalytics.com",
+      "company_name": "Northstar Analytics",
+      "role_title": "VP of Growth",
+      "source": "website_form",
+      "message": "We are scaling into two new markets and need help with positioning, demand generation, and outbound campaigns."
+    },
+    {
+      "lead_id": "lead_student_skip",
+      "first_name": "Omar",
+      "last_name": "Nasser",
+      "email": "omar.nasser@example.com",
+      "company_name": "Omar Portfolio",
+      "role_title": "Student",
+      "source": "website_form",
+      "message": "I am building my personal portfolio and wanted free advice on how to get more followers."
+    },
+    {
+      "lead_id": "lead_ecommerce_nurture",
+      "first_name": "Lina",
+      "last_name": "Park",
+      "email": "lina@glowcart.co",
+      "company_name": "GlowCart",
+      "role_title": "Founder",
+      "source": "linkedin_inbound",
+      "message": "We may need help improving our marketing, but we are still figuring out budget and timing."
+    },
+    {
+      "lead_id": "lead_competitor_ambiguous",
+      "first_name": "Daniel",
+      "last_name": "Reeves",
+      "email": "daniel@brightbridgegrowth.com",
+      "company_name": "BrightBridge Growth",
+      "role_title": "Founder",
+      "source": "website_form",
+      "message": "We are exploring partnerships and would like to discuss how your team approaches growth strategy for B2B clients."
+    }
+  ],
+  "contact_enrichments": {
+    "lead_saas_pursue": {
+      "lead_id": "lead_saas_pursue",
+      "full_name": "Maya Chen",
+      "email": "maya.chen@northstaranalytics.com",
+      "role_title": "VP of Growth",
+      "seniority": "executive",
+      "buyer_fit_score": 95,
+      "linkedin_url": "https://linkedin.com/in/maya-chen-growth",
+      "evidence": [
+        "VP of Growth is a likely buyer or strong champion for agency services.",
+        "Inbound message references positioning, demand generation, and outbound campaigns.",
+        "Contact appears commercially relevant rather than student, vendor, or job seeker."
+      ]
+    },
+    "lead_student_skip": {
+      "lead_id": "lead_student_skip",
+      "full_name": "Omar Nasser",
+      "email": "omar.nasser@example.com",
+      "role_title": "Student",
+      "seniority": "individual",
+      "buyer_fit_score": 10,
+      "linkedin_url": null,
+      "evidence": [
+        "Student role is not a likely buyer for a marketing agency retainer.",
+        "Message asks for free personal portfolio advice.",
+        "No company budget or commercial buying signal is present."
+      ]
+    },
+    "lead_ecommerce_nurture": {
+      "lead_id": "lead_ecommerce_nurture",
+      "full_name": "Lina Park",
+      "email": "lina@glowcart.co",
+      "role_title": "Founder",
+      "seniority": "founder",
+      "buyer_fit_score": 85,
+      "linkedin_url": "https://linkedin.com/in/lina-park-glowcart",
+      "evidence": [
+        "Founder can be a direct decision-maker.",
+        "Message shows potential marketing need.",
+        "Budget and timing are uncertain."
+      ]
+    },
+    "lead_competitor_ambiguous": {
+      "lead_id": "lead_competitor_ambiguous",
+      "full_name": "Daniel Reeves",
+      "email": "daniel@brightbridgegrowth.com",
+      "role_title": "Founder",
+      "seniority": "founder",
+      "buyer_fit_score": 75,
+      "linkedin_url": "https://linkedin.com/in/daniel-reeves-growth",
+      "evidence": [
+        "Founder has decision authority.",
+        "Message mentions growth strategy and B2B clients.",
+        "The wording may indicate partnership interest rather than buying intent."
+      ]
+    }
+  },
+  "company_enrichments": {
+    "Northstar Analytics": {
+      "company_name": "Northstar Analytics",
+      "website": "https://northstaranalytics.com",
+      "industry": "B2B SaaS analytics",
+      "employee_count": 180,
+      "estimated_annual_revenue": "$20M-$50M",
+      "geography": "United States",
+      "growth_signals": [
+        "Expanding into two new markets.",
+        "Hiring for sales and customer success roles.",
+        "Recently launched an enterprise analytics package."
+      ],
+      "pain_signals": [
+        "Needs positioning support.",
+        "Needs demand generation.",
+        "Needs outbound campaign support."
+      ],
+      "risk_signals": [],
+      "is_competing_agency": false,
+      "evidence": [
+        "B2B SaaS company with enough size to afford retainer services.",
+        "Inbound message contains clear commercial marketing pain.",
+        "Growth-stage context creates urgency."
+      ]
+    },
+    "Omar Portfolio": {
+      "company_name": "Omar Portfolio",
+      "website": null,
+      "industry": "Personal portfolio",
+      "employee_count": 1,
+      "estimated_annual_revenue": null,
+      "geography": "Egypt",
+      "growth_signals": [],
+      "pain_signals": [
+        "Wants more followers for a personal portfolio."
+      ],
+      "risk_signals": [
+        "No evidence of company budget.",
+        "Not a qualified business lead.",
+        "Request appears to be free advice rather than agency buying intent."
+      ],
+      "is_competing_agency": false,
+      "evidence": [
+        "Personal/student lead does not match retainer ICP.",
+        "No company website, budget, or commercial buying trigger found."
+      ]
+    },
+    "GlowCart": {
+      "company_name": "GlowCart",
+      "website": "https://glowcart.co",
+      "industry": "E-commerce beauty brand",
+      "employee_count": 24,
+      "estimated_annual_revenue": "$1M-$5M",
+      "geography": "United Kingdom",
+      "growth_signals": [
+        "Direct-to-consumer brand with active product catalog.",
+        "Recent social campaigns show inconsistent messaging."
+      ],
+      "pain_signals": [
+        "Founder says they may need help improving marketing.",
+        "Budget and timing are not yet clear."
+      ],
+      "risk_signals": [
+        "Small team may not have retainer budget.",
+        "Buying intent is exploratory rather than urgent."
+      ],
+      "is_competing_agency": false,
+      "evidence": [
+        "Industry can fit a marketing agency, but size and budget are uncertain.",
+        "Potential need exists, but urgency is weak."
+      ]
+    },
+    "BrightBridge Growth": {
+      "company_name": "BrightBridge Growth",
+      "website": "https://brightbridgegrowth.com",
+      "industry": "Marketing agency",
+      "employee_count": 35,
+      "estimated_annual_revenue": "$2M-$10M",
+      "geography": "United States",
+      "growth_signals": [
+        "Works with B2B clients.",
+        "Founder is exploring partnerships."
+      ],
+      "pain_signals": [
+        "Interested in discussing growth strategy approaches."
+      ],
+      "risk_signals": [
+        "Company appears to be a competing marketing agency.",
+        "Outreach could reveal positioning or sales process to a competitor.",
+        "Partnership intent is ambiguous."
+      ],
+      "is_competing_agency": true,
+      "evidence": [
+        "Strong relevance to marketing, but likely competitor risk.",
+        "This is intentionally ambiguous and should trigger debate or human review."
+      ]
+    }
+  }
+}

@@ -1,0 +1,464 @@
+{
+  "lead_id": "lead_saas_pursue",
+  "final_disposition": "pursue",
+  "lead_intelligence": {
+    "raw_lead": {
+      "lead_id": "lead_saas_pursue",
+      "first_name": "Maya",
+      "last_name": "Chen",
+      "email": "maya.chen@northstaranalytics.com",
+      "company_name": "Northstar Analytics",
+      "role_title": "VP of Growth",
+      "source": "website_form",
+      "message": "We are scaling into two new markets and need help with positioning, demand generation, and outbound campaigns."
+    },
+    "contact": {
+      "lead_id": "lead_saas_pursue",
+      "full_name": "Maya Chen",
+      "email": "maya.chen@northstaranalytics.com",
+      "role_title": "VP of Growth",
+      "seniority": "executive",
+      "buyer_fit_score": 95,
+      "linkedin_url": "https://linkedin.com/in/maya-chen-growth",
+      "evidence": [
+        "VP of Growth is a likely buyer or strong champion for agency services.",
+        "Inbound message references positioning, demand generation, and outbound campaigns.",
+        "Contact appears commercially relevant rather than student, vendor, or job seeker."
+      ]
+    },
+    "company": {
+      "company_name": "Northstar Analytics",
+      "website": "https://northstaranalytics.com",
+      "industry": "B2B SaaS analytics",
+      "employee_count": 180,
+      "estimated_annual_revenue": "$20M-$50M",
+      "geography": "United States",
+      "growth_signals": [
+        "Expanding into two new markets.",
+        "Hiring for sales and customer success roles.",
+        "Recently launched an enterprise analytics package."
+      ],
+      "pain_signals": [
+        "Needs positioning support.",
+        "Needs demand generation.",
+        "Needs outbound campaign support."
+      ],
+      "risk_signals": [],
+      "is_competing_agency": false,
+      "evidence": [
+        "B2B SaaS company with enough size to afford retainer services.",
+        "Inbound message contains clear commercial marketing pain.",
+        "Growth-stage context creates urgency."
+      ]
+    },
+    "score": {
+      "total_score": 99,
+      "confidence": 0.88,
+      "proposed_disposition": "pursue",
+      "breakdown": {
+        "industry_fit": 25,
+        "company_size_budget": 20,
+        "growth_signal": 15,
+        "buyer_fit": 19,
+        "pain_signal": 20,
+        "risk_penalty": 0
+      },
+      "positive_evidence": [
+        "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+        "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+        "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+        "Contact has strong buyer fit: VP of Growth scored 19/20.",
+        "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
+      ],
+      "negative_evidence": [],
+      "uncertainty": []
+    }
+  },
+  "debate_positions": [
+    {
+      "agent": "pursuit_advocate_agent",
+      "recommendation": "pursue",
+      "confidence": 0.93,
+      "thesis": "This lead matches the ICP strongly enough to justify autonomous first-touch outreach.",
+      "evidence_for": [
+        "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+        "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+        "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+        "Contact has strong buyer fit: VP of Growth scored 19/20.",
+        "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support.",
+        "VP of Growth is a likely buyer or strong champion for agency services.",
+        "Inbound message references positioning, demand generation, and outbound campaigns.",
+        "Contact appears commercially relevant rather than student, vendor, or job seeker.",
+        "B2B SaaS company with enough size to afford retainer services.",
+        "Inbound message contains clear commercial marketing pain.",
+        "Growth-stage context creates urgency."
+      ],
+      "evidence_against": [],
+      "risk_notes": []
+    },
+    {
+      "agent": "risk_skeptic_agent",
+      "recommendation": "nurture",
+      "confidence": 0.52,
+      "thesis": "The lead is attractive, but the safer opposing position is to verify the opportunity before outreach. This creates a real challenge for the resolver rather than rubber-stamping pursuit.",
+      "evidence_for": [],
+      "evidence_against": [
+        "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+        "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+        "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+        "Contact has strong buyer fit: VP of Growth scored 19/20.",
+        "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
+      ],
+      "risk_notes": []
+    }
+  ],
+  "resolution": {
+    "final_disposition": "pursue",
+    "confidence": 0.91,
+    "resolution_rule": "Confidence-weighted arbitration with hard risk vetoes: competitor/conflict risk or low confidence escalates to human review; clear high-score, high-confidence leads can be pursued; clear poor-fit leads are skipped; moderate-fit leads are nurtured.",
+    "rationale": "The lead has a high ICP score, strong confidence, and no meaningful risk penalty. The advocate's pursue case outweighs the skeptic's caution.",
+    "winning_position": {
+      "agent": "pursuit_advocate_agent",
+      "recommendation": "pursue",
+      "confidence": 0.93,
+      "thesis": "This lead matches the ICP strongly enough to justify autonomous first-touch outreach.",
+      "evidence_for": [
+        "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+        "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+        "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+        "Contact has strong buyer fit: VP of Growth scored 19/20.",
+        "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support.",
+        "VP of Growth is a likely buyer or strong champion for agency services.",
+        "Inbound message references positioning, demand generation, and outbound campaigns.",
+        "Contact appears commercially relevant rather than student, vendor, or job seeker.",
+        "B2B SaaS company with enough size to afford retainer services.",
+        "Inbound message contains clear commercial marketing pain.",
+        "Growth-stage context creates urgency."
+      ],
+      "evidence_against": [],
+      "risk_notes": []
+    },
+    "dissenting_positions": [
+      {
+        "agent": "risk_skeptic_agent",
+        "recommendation": "nurture",
+        "confidence": 0.52,
+        "thesis": "The lead is attractive, but the safer opposing position is to verify the opportunity before outreach. This creates a real challenge for the resolver rather than rubber-stamping pursuit.",
+        "evidence_for": [],
+        "evidence_against": [
+          "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+          "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+          "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+          "Contact has strong buyer fit: VP of Growth scored 19/20.",
+          "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
+        ],
+        "risk_notes": []
+      }
+    ],
+    "requires_human_review": false,
+    "human_review_reason": null
+  },
+  "outreach": {
+    "subject": "Maya, growth support for Northstar Analytics",
+    "email_body": "Hi Maya,\n\nI noticed that Northstar Analytics is working through a growth moment: expanding into two new markets.\n\nYour note about needing positioning support stood out because those are exactly the kinds of situations where a focused agency partner can help clarify positioning, prioritize campaigns, and turn early demand signals into a repeatable acquisition motion.\n\nGiven your role as VP of Growth, I thought it may be useful to compare notes on what you are trying to solve and whether Sircles could help.\n\nWould you be open to a short conversation next week?\n\nBest,\nSircles Team",
+    "linkedin_note": "Hi Maya, saw that Northstar Analytics is focused on positioning support. Thought it could be useful to connect and compare notes on growth strategy.",
+    "grounded_in": [
+      "Contact role: VP of Growth",
+      "Company industry: B2B SaaS analytics",
+      "Company size: 180 employees",
+      "Growth signal: Expanding into two new markets.",
+      "Pain signal: Needs positioning support.",
+      "Resolved disposition: pursue"
+    ]
+  },
+  "crm_record": {
+    "lead_id": "lead_saas_pursue",
+    "contact_name": "Maya Chen",
+    "email": "maya.chen@northstaranalytics.com",
+    "company_name": "Northstar Analytics",
+    "role_title": "VP of Growth",
+    "disposition": "pursue",
+    "deal_stage": "qualified",
+    "score": 99,
+    "confidence": 0.91,
+    "human_review_flag": false,
+    "human_review_reason": null,
+    "notes": [
+      "Lead score: 99/100.",
+      "Lead Intelligence proposed: pursue with confidence 0.88.",
+      "Final resolution: pursue with confidence 0.91.",
+      "Resolution rationale: The lead has a high ICP score, strong confidence, and no meaningful risk penalty. The advocate's pursue case outweighs the skeptic's caution.",
+      "Winning debate position: pursuit_advocate_agent recommended pursue with confidence 0.93.",
+      "Recorded dissent: risk_skeptic_agent recommended nurture with confidence 0.52.",
+      "Positive evidence: Industry fit is strong: B2B SaaS analytics scored 25/25. | Company size suggests possible retainer budget: 180 employees scored 20/20. | Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+      "Outreach draft created but not sent."
+    ],
+    "outreach": {
+      "subject": "Maya, growth support for Northstar Analytics",
+      "email_body": "Hi Maya,\n\nI noticed that Northstar Analytics is working through a growth moment: expanding into two new markets.\n\nYour note about needing positioning support stood out because those are exactly the kinds of situations where a focused agency partner can help clarify positioning, prioritize campaigns, and turn early demand signals into a repeatable acquisition motion.\n\nGiven your role as VP of Growth, I thought it may be useful to compare notes on what you are trying to solve and whether Sircles could help.\n\nWould you be open to a short conversation next week?\n\nBest,\nSircles Team",
+      "linkedin_note": "Hi Maya, saw that Northstar Analytics is focused on positioning support. Thought it could be useful to connect and compare notes on growth strategy.",
+      "grounded_in": [
+        "Contact role: VP of Growth",
+        "Company industry: B2B SaaS analytics",
+        "Company size: 180 employees",
+        "Growth signal: Expanding into two new markets.",
+        "Pain signal: Needs positioning support.",
+        "Resolved disposition: pursue"
+      ]
+    }
+  },
+  "trace": [
+    {
+      "timestamp": "2026-06-11T20:55:36.883598Z",
+      "actor": "orchestrator",
+      "action": "intake_received",
+      "summary": "Received inbound lead lead_saas_pursue from website_form.",
+      "data": {
+        "lead_id": "lead_saas_pursue",
+        "company_name": "Northstar Analytics",
+        "role_title": "VP of Growth",
+        "message": "We are scaling into two new markets and need help with positioning, demand generation, and outbound campaigns."
+      }
+    },
+    {
+      "timestamp": "2026-06-11T20:55:36.884110Z",
+      "actor": "lead_intelligence_agent",
+      "action": "lead_enriched_and_scored",
+      "summary": "Enriched Maya Chen at Northstar Analytics; proposed pursue with score 99/100 and confidence 0.88.",
+      "data": {
+        "contact": {
+          "lead_id": "lead_saas_pursue",
+          "full_name": "Maya Chen",
+          "email": "maya.chen@northstaranalytics.com",
+          "role_title": "VP of Growth",
+          "seniority": "executive",
+          "buyer_fit_score": 95,
+          "linkedin_url": "https://linkedin.com/in/maya-chen-growth",
+          "evidence": [
+            "VP of Growth is a likely buyer or strong champion for agency services.",
+            "Inbound message references positioning, demand generation, and outbound campaigns.",
+            "Contact appears commercially relevant rather than student, vendor, or job seeker."
+          ]
+        },
+        "company": {
+          "company_name": "Northstar Analytics",
+          "website": "https://northstaranalytics.com",
+          "industry": "B2B SaaS analytics",
+          "employee_count": 180,
+          "estimated_annual_revenue": "$20M-$50M",
+          "geography": "United States",
+          "growth_signals": [
+            "Expanding into two new markets.",
+            "Hiring for sales and customer success roles.",
+            "Recently launched an enterprise analytics package."
+          ],
+          "pain_signals": [
+            "Needs positioning support.",
+            "Needs demand generation.",
+            "Needs outbound campaign support."
+          ],
+          "risk_signals": [],
+          "is_competing_agency": false,
+          "evidence": [
+            "B2B SaaS company with enough size to afford retainer services.",
+            "Inbound message contains clear commercial marketing pain.",
+            "Growth-stage context creates urgency."
+          ]
+        },
+        "score": {
+          "total_score": 99,
+          "confidence": 0.88,
+          "proposed_disposition": "pursue",
+          "breakdown": {
+            "industry_fit": 25,
+            "company_size_budget": 20,
+            "growth_signal": 15,
+            "buyer_fit": 19,
+            "pain_signal": 20,
+            "risk_penalty": 0
+          },
+          "positive_evidence": [
+            "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+            "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+            "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+            "Contact has strong buyer fit: VP of Growth scored 19/20.",
+            "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
+          ],
+          "negative_evidence": [],
+          "uncertainty": []
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-11T20:55:36.884130Z",
+      "actor": "pursuit_advocate_agent",
+      "action": "debate_position_submitted",
+      "summary": "pursuit_advocate_agent recommended pursue with confidence 0.93.",
+      "data": {
+        "agent": "pursuit_advocate_agent",
+        "recommendation": "pursue",
+        "confidence": 0.93,
+        "thesis": "This lead matches the ICP strongly enough to justify autonomous first-touch outreach.",
+        "evidence_for": [
+          "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+          "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+          "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+          "Contact has strong buyer fit: VP of Growth scored 19/20.",
+          "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support.",
+          "VP of Growth is a likely buyer or strong champion for agency services.",
+          "Inbound message references positioning, demand generation, and outbound campaigns.",
+          "Contact appears commercially relevant rather than student, vendor, or job seeker.",
+          "B2B SaaS company with enough size to afford retainer services.",
+          "Inbound message contains clear commercial marketing pain.",
+          "Growth-stage context creates urgency."
+        ],
+        "evidence_against": [],
+        "risk_notes": []
+      }
+    },
+    {
+      "timestamp": "2026-06-11T20:55:36.884135Z",
+      "actor": "risk_skeptic_agent",
+      "action": "debate_position_submitted",
+      "summary": "risk_skeptic_agent recommended nurture with confidence 0.52.",
+      "data": {
+        "agent": "risk_skeptic_agent",
+        "recommendation": "nurture",
+        "confidence": 0.52,
+        "thesis": "The lead is attractive, but the safer opposing position is to verify the opportunity before outreach. This creates a real challenge for the resolver rather than rubber-stamping pursuit.",
+        "evidence_for": [],
+        "evidence_against": [
+          "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+          "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+          "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+          "Contact has strong buyer fit: VP of Growth scored 19/20.",
+          "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
+        ],
+        "risk_notes": []
+      }
+    },
+    {
+      "timestamp": "2026-06-11T20:55:36.884155Z",
+      "actor": "orchestrator",
+      "action": "debate_resolved",
+      "summary": "Resolved debate to pursue with confidence 0.91.",
+      "data": {
+        "resolution": {
+          "final_disposition": "pursue",
+          "confidence": 0.91,
+          "resolution_rule": "Confidence-weighted arbitration with hard risk vetoes: competitor/conflict risk or low confidence escalates to human review; clear high-score, high-confidence leads can be pursued; clear poor-fit leads are skipped; moderate-fit leads are nurtured.",
+          "rationale": "The lead has a high ICP score, strong confidence, and no meaningful risk penalty. The advocate's pursue case outweighs the skeptic's caution.",
+          "winning_position": {
+            "agent": "pursuit_advocate_agent",
+            "recommendation": "pursue",
+            "confidence": 0.93,
+            "thesis": "This lead matches the ICP strongly enough to justify autonomous first-touch outreach.",
+            "evidence_for": [
+              "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+              "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+              "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+              "Contact has strong buyer fit: VP of Growth scored 19/20.",
+              "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support.",
+              "VP of Growth is a likely buyer or strong champion for agency services.",
+              "Inbound message references positioning, demand generation, and outbound campaigns.",
+              "Contact appears commercially relevant rather than student, vendor, or job seeker.",
+              "B2B SaaS company with enough size to afford retainer services.",
+              "Inbound message contains clear commercial marketing pain.",
+              "Growth-stage context creates urgency."
+            ],
+            "evidence_against": [],
+            "risk_notes": []
+          },
+          "dissenting_positions": [
+            {
+              "agent": "risk_skeptic_agent",
+              "recommendation": "nurture",
+              "confidence": 0.52,
+              "thesis": "The lead is attractive, but the safer opposing position is to verify the opportunity before outreach. This creates a real challenge for the resolver rather than rubber-stamping pursuit.",
+              "evidence_for": [],
+              "evidence_against": [
+                "Industry fit is strong: B2B SaaS analytics scored 25/25.",
+                "Company size suggests possible retainer budget: 180 employees scored 20/20.",
+                "Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+                "Contact has strong buyer fit: VP of Growth scored 19/20.",
+                "Pain signals found: Needs positioning support.; Needs demand generation.; Needs outbound campaign support."
+              ],
+              "risk_notes": []
+            }
+          ],
+          "requires_human_review": false,
+          "human_review_reason": null
+        },
+        "recorded_dissent": [
+          {
+            "agent": "risk_skeptic_agent",
+            "recommendation": "nurture",
+            "confidence": 0.52,
+            "thesis": "The lead is attractive, but the safer opposing position is to verify the opportunity before outreach. This creates a real challenge for the resolver rather than rubber-stamping pursuit."
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T20:55:36.884168Z",
+      "actor": "sdr_outreach_agent",
+      "action": "outreach_drafted",
+      "summary": "Drafted first-touch email and LinkedIn note because the final disposition was pursue.",
+      "data": {
+        "subject": "Maya, growth support for Northstar Analytics",
+        "email_body": "Hi Maya,\n\nI noticed that Northstar Analytics is working through a growth moment: expanding into two new markets.\n\nYour note about needing positioning support stood out because those are exactly the kinds of situations where a focused agency partner can help clarify positioning, prioritize campaigns, and turn early demand signals into a repeatable acquisition motion.\n\nGiven your role as VP of Growth, I thought it may be useful to compare notes on what you are trying to solve and whether Sircles could help.\n\nWould you be open to a short conversation next week?\n\nBest,\nSircles Team",
+        "linkedin_note": "Hi Maya, saw that Northstar Analytics is focused on positioning support. Thought it could be useful to connect and compare notes on growth strategy.",
+        "grounded_in": [
+          "Contact role: VP of Growth",
+          "Company industry: B2B SaaS analytics",
+          "Company size: 180 employees",
+          "Growth signal: Expanding into two new markets.",
+          "Pain signal: Needs positioning support.",
+          "Resolved disposition: pursue"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T20:55:36.884634Z",
+      "actor": "crm_hygiene_agent",
+      "action": "crm_record_upserted",
+      "summary": "CRM record written with stage qualified and disposition pursue.",
+      "data": {
+        "lead_id": "lead_saas_pursue",
+        "contact_name": "Maya Chen",
+        "email": "maya.chen@northstaranalytics.com",
+        "company_name": "Northstar Analytics",
+        "role_title": "VP of Growth",
+        "disposition": "pursue",
+        "deal_stage": "qualified",
+        "score": 99,
+        "confidence": 0.91,
+        "human_review_flag": false,
+        "human_review_reason": null,
+        "notes": [
+          "Lead score: 99/100.",
+          "Lead Intelligence proposed: pursue with confidence 0.88.",
+          "Final resolution: pursue with confidence 0.91.",
+          "Resolution rationale: The lead has a high ICP score, strong confidence, and no meaningful risk penalty. The advocate's pursue case outweighs the skeptic's caution.",
+          "Winning debate position: pursuit_advocate_agent recommended pursue with confidence 0.93.",
+          "Recorded dissent: risk_skeptic_agent recommended nurture with confidence 0.52.",
+          "Positive evidence: Industry fit is strong: B2B SaaS analytics scored 25/25. | Company size suggests possible retainer budget: 180 employees scored 20/20. | Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+          "Outreach draft created but not sent."
+        ],
+        "outreach": {
+          "subject": "Maya, growth support for Northstar Analytics",
+          "email_body": "Hi Maya,\n\nI noticed that Northstar Analytics is working through a growth moment: expanding into two new markets.\n\nYour note about needing positioning support stood out because those are exactly the kinds of situations where a focused agency partner can help clarify positioning, prioritize campaigns, and turn early demand signals into a repeatable acquisition motion.\n\nGiven your role as VP of Growth, I thought it may be useful to compare notes on what you are trying to solve and whether Sircles could help.\n\nWould you be open to a short conversation next week?\n\nBest,\nSircles Team",
+          "linkedin_note": "Hi Maya, saw that Northstar Analytics is focused on positioning support. Thought it could be useful to connect and compare notes on growth strategy.",
+          "grounded_in": [
+            "Contact role: VP of Growth",
+            "Company industry: B2B SaaS analytics",
+            "Company size: 180 employees",
+            "Growth signal: Expanding into two new markets.",
+            "Pain signal: Needs positioning support.",
+            "Resolved disposition: pursue"
+          ]
+        }
+      }
+    }
+  ]
+}

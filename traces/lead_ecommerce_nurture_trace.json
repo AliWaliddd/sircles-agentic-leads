@@ -1,0 +1,482 @@
+{
+  "lead_id": "lead_ecommerce_nurture",
+  "final_disposition": "nurture",
+  "lead_intelligence": {
+    "raw_lead": {
+      "lead_id": "lead_ecommerce_nurture",
+      "first_name": "Lina",
+      "last_name": "Park",
+      "email": "lina@glowcart.co",
+      "company_name": "GlowCart",
+      "role_title": "Founder",
+      "source": "linkedin_inbound",
+      "message": "We may need help improving our marketing, but we are still figuring out budget and timing."
+    },
+    "contact": {
+      "lead_id": "lead_ecommerce_nurture",
+      "full_name": "Lina Park",
+      "email": "lina@glowcart.co",
+      "role_title": "Founder",
+      "seniority": "founder",
+      "buyer_fit_score": 85,
+      "linkedin_url": "https://linkedin.com/in/lina-park-glowcart",
+      "evidence": [
+        "Founder can be a direct decision-maker.",
+        "Message shows potential marketing need.",
+        "Budget and timing are uncertain."
+      ]
+    },
+    "company": {
+      "company_name": "GlowCart",
+      "website": "https://glowcart.co",
+      "industry": "E-commerce beauty brand",
+      "employee_count": 24,
+      "estimated_annual_revenue": "$1M-$5M",
+      "geography": "United Kingdom",
+      "growth_signals": [
+        "Direct-to-consumer brand with active product catalog.",
+        "Recent social campaigns show inconsistent messaging."
+      ],
+      "pain_signals": [
+        "Founder says they may need help improving marketing.",
+        "Budget and timing are not yet clear."
+      ],
+      "risk_signals": [
+        "Small team may not have retainer budget.",
+        "Buying intent is exploratory rather than urgent."
+      ],
+      "is_competing_agency": false,
+      "evidence": [
+        "Industry can fit a marketing agency, but size and budget are uncertain.",
+        "Potential need exists, but urgency is weak."
+      ]
+    },
+    "score": {
+      "total_score": 55,
+      "confidence": 0.69,
+      "proposed_disposition": "nurture",
+      "breakdown": {
+        "industry_fit": 18,
+        "company_size_budget": 10,
+        "growth_signal": 10,
+        "buyer_fit": 17,
+        "pain_signal": 14,
+        "risk_penalty": -14
+      },
+      "positive_evidence": [
+        "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+        "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+        "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+        "Contact has strong buyer fit: Founder scored 17/20.",
+        "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear."
+      ],
+      "negative_evidence": [
+        "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+        "Risk penalty applied: -14 points."
+      ],
+      "uncertainty": [
+        "Budget or timing is uncertain."
+      ]
+    }
+  },
+  "debate_positions": [
+    {
+      "agent": "pursuit_advocate_agent",
+      "recommendation": "nurture",
+      "confidence": 0.69,
+      "thesis": "The lead has enough upside to keep warm, but the current evidence does not justify fully autonomous sales outreach.",
+      "evidence_for": [
+        "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+        "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+        "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+        "Contact has strong buyer fit: Founder scored 17/20.",
+        "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear.",
+        "Founder can be a direct decision-maker.",
+        "Message shows potential marketing need.",
+        "Budget and timing are uncertain.",
+        "Industry can fit a marketing agency, but size and budget are uncertain.",
+        "Potential need exists, but urgency is weak."
+      ],
+      "evidence_against": [
+        "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+        "Risk penalty applied: -14 points."
+      ],
+      "risk_notes": [
+        "Small team may not have retainer budget.",
+        "Buying intent is exploratory rather than urgent."
+      ]
+    },
+    {
+      "agent": "risk_skeptic_agent",
+      "recommendation": "human_review",
+      "confidence": 0.7,
+      "thesis": "The lead has commercial upside, but risk signals are strong enough that a human should review before any outreach.",
+      "evidence_for": [
+        "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+        "Risk penalty applied: -14 points.",
+        "Budget or timing is uncertain."
+      ],
+      "evidence_against": [
+        "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+        "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+        "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+        "Contact has strong buyer fit: Founder scored 17/20.",
+        "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear."
+      ],
+      "risk_notes": [
+        "Small team may not have retainer budget.",
+        "Buying intent is exploratory rather than urgent."
+      ]
+    }
+  ],
+  "resolution": {
+    "final_disposition": "nurture",
+    "confidence": 0.69,
+    "resolution_rule": "Confidence-weighted arbitration with hard risk vetoes: competitor/conflict risk or low confidence escalates to human review; clear high-score, high-confidence leads can be pursued; clear poor-fit leads are skipped; moderate-fit leads are nurtured.",
+    "rationale": "The lead has plausible fit but not enough urgency or confidence for autonomous first-touch outreach.",
+    "winning_position": {
+      "agent": "pursuit_advocate_agent",
+      "recommendation": "nurture",
+      "confidence": 0.69,
+      "thesis": "The lead has enough upside to keep warm, but the current evidence does not justify fully autonomous sales outreach.",
+      "evidence_for": [
+        "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+        "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+        "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+        "Contact has strong buyer fit: Founder scored 17/20.",
+        "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear.",
+        "Founder can be a direct decision-maker.",
+        "Message shows potential marketing need.",
+        "Budget and timing are uncertain.",
+        "Industry can fit a marketing agency, but size and budget are uncertain.",
+        "Potential need exists, but urgency is weak."
+      ],
+      "evidence_against": [
+        "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+        "Risk penalty applied: -14 points."
+      ],
+      "risk_notes": [
+        "Small team may not have retainer budget.",
+        "Buying intent is exploratory rather than urgent."
+      ]
+    },
+    "dissenting_positions": [
+      {
+        "agent": "risk_skeptic_agent",
+        "recommendation": "human_review",
+        "confidence": 0.7,
+        "thesis": "The lead has commercial upside, but risk signals are strong enough that a human should review before any outreach.",
+        "evidence_for": [
+          "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+          "Risk penalty applied: -14 points.",
+          "Budget or timing is uncertain."
+        ],
+        "evidence_against": [
+          "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+          "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+          "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+          "Contact has strong buyer fit: Founder scored 17/20.",
+          "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear."
+        ],
+        "risk_notes": [
+          "Small team may not have retainer budget.",
+          "Buying intent is exploratory rather than urgent."
+        ]
+      }
+    ],
+    "requires_human_review": false,
+    "human_review_reason": null
+  },
+  "outreach": null,
+  "crm_record": {
+    "lead_id": "lead_ecommerce_nurture",
+    "contact_name": "Lina Park",
+    "email": "lina@glowcart.co",
+    "company_name": "GlowCart",
+    "role_title": "Founder",
+    "disposition": "nurture",
+    "deal_stage": "nurture",
+    "score": 55,
+    "confidence": 0.69,
+    "human_review_flag": false,
+    "human_review_reason": null,
+    "notes": [
+      "Lead score: 55/100.",
+      "Lead Intelligence proposed: nurture with confidence 0.69.",
+      "Final resolution: nurture with confidence 0.69.",
+      "Resolution rationale: The lead has plausible fit but not enough urgency or confidence for autonomous first-touch outreach.",
+      "Winning debate position: pursuit_advocate_agent recommended nurture with confidence 0.69.",
+      "Recorded dissent: risk_skeptic_agent recommended human_review with confidence 0.7.",
+      "Positive evidence: Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25. | Company size suggests possible retainer budget: 24 employees scored 10/20. | Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+      "Negative evidence: Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent. | Risk penalty applied: -14 points.",
+      "Uncertainty: Budget or timing is uncertain.",
+      "No outreach drafted because final disposition was not pursue."
+    ],
+    "outreach": null
+  },
+  "trace": [
+    {
+      "timestamp": "2026-06-11T18:23:41.721013Z",
+      "actor": "orchestrator",
+      "action": "intake_received",
+      "summary": "Received inbound lead lead_ecommerce_nurture from linkedin_inbound.",
+      "data": {
+        "lead_id": "lead_ecommerce_nurture",
+        "company_name": "GlowCart",
+        "role_title": "Founder",
+        "message": "We may need help improving our marketing, but we are still figuring out budget and timing."
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.721180Z",
+      "actor": "lead_intelligence_agent",
+      "action": "lead_enriched_and_scored",
+      "summary": "Enriched Lina Park at GlowCart; proposed nurture with score 55/100 and confidence 0.69.",
+      "data": {
+        "contact": {
+          "lead_id": "lead_ecommerce_nurture",
+          "full_name": "Lina Park",
+          "email": "lina@glowcart.co",
+          "role_title": "Founder",
+          "seniority": "founder",
+          "buyer_fit_score": 85,
+          "linkedin_url": "https://linkedin.com/in/lina-park-glowcart",
+          "evidence": [
+            "Founder can be a direct decision-maker.",
+            "Message shows potential marketing need.",
+            "Budget and timing are uncertain."
+          ]
+        },
+        "company": {
+          "company_name": "GlowCart",
+          "website": "https://glowcart.co",
+          "industry": "E-commerce beauty brand",
+          "employee_count": 24,
+          "estimated_annual_revenue": "$1M-$5M",
+          "geography": "United Kingdom",
+          "growth_signals": [
+            "Direct-to-consumer brand with active product catalog.",
+            "Recent social campaigns show inconsistent messaging."
+          ],
+          "pain_signals": [
+            "Founder says they may need help improving marketing.",
+            "Budget and timing are not yet clear."
+          ],
+          "risk_signals": [
+            "Small team may not have retainer budget.",
+            "Buying intent is exploratory rather than urgent."
+          ],
+          "is_competing_agency": false,
+          "evidence": [
+            "Industry can fit a marketing agency, but size and budget are uncertain.",
+            "Potential need exists, but urgency is weak."
+          ]
+        },
+        "score": {
+          "total_score": 55,
+          "confidence": 0.69,
+          "proposed_disposition": "nurture",
+          "breakdown": {
+            "industry_fit": 18,
+            "company_size_budget": 10,
+            "growth_signal": 10,
+            "buyer_fit": 17,
+            "pain_signal": 14,
+            "risk_penalty": -14
+          },
+          "positive_evidence": [
+            "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+            "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+            "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+            "Contact has strong buyer fit: Founder scored 17/20.",
+            "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear."
+          ],
+          "negative_evidence": [
+            "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+            "Risk penalty applied: -14 points."
+          ],
+          "uncertainty": [
+            "Budget or timing is uncertain."
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.721196Z",
+      "actor": "pursuit_advocate_agent",
+      "action": "debate_position_submitted",
+      "summary": "pursuit_advocate_agent recommended nurture with confidence 0.69.",
+      "data": {
+        "agent": "pursuit_advocate_agent",
+        "recommendation": "nurture",
+        "confidence": 0.69,
+        "thesis": "The lead has enough upside to keep warm, but the current evidence does not justify fully autonomous sales outreach.",
+        "evidence_for": [
+          "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+          "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+          "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+          "Contact has strong buyer fit: Founder scored 17/20.",
+          "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear.",
+          "Founder can be a direct decision-maker.",
+          "Message shows potential marketing need.",
+          "Budget and timing are uncertain.",
+          "Industry can fit a marketing agency, but size and budget are uncertain.",
+          "Potential need exists, but urgency is weak."
+        ],
+        "evidence_against": [
+          "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+          "Risk penalty applied: -14 points."
+        ],
+        "risk_notes": [
+          "Small team may not have retainer budget.",
+          "Buying intent is exploratory rather than urgent."
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.721202Z",
+      "actor": "risk_skeptic_agent",
+      "action": "debate_position_submitted",
+      "summary": "risk_skeptic_agent recommended human_review with confidence 0.7.",
+      "data": {
+        "agent": "risk_skeptic_agent",
+        "recommendation": "human_review",
+        "confidence": 0.7,
+        "thesis": "The lead has commercial upside, but risk signals are strong enough that a human should review before any outreach.",
+        "evidence_for": [
+          "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+          "Risk penalty applied: -14 points.",
+          "Budget or timing is uncertain."
+        ],
+        "evidence_against": [
+          "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+          "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+          "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+          "Contact has strong buyer fit: Founder scored 17/20.",
+          "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear."
+        ],
+        "risk_notes": [
+          "Small team may not have retainer budget.",
+          "Buying intent is exploratory rather than urgent."
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.721219Z",
+      "actor": "orchestrator",
+      "action": "debate_resolved",
+      "summary": "Resolved debate to nurture with confidence 0.69.",
+      "data": {
+        "resolution": {
+          "final_disposition": "nurture",
+          "confidence": 0.69,
+          "resolution_rule": "Confidence-weighted arbitration with hard risk vetoes: competitor/conflict risk or low confidence escalates to human review; clear high-score, high-confidence leads can be pursued; clear poor-fit leads are skipped; moderate-fit leads are nurtured.",
+          "rationale": "The lead has plausible fit but not enough urgency or confidence for autonomous first-touch outreach.",
+          "winning_position": {
+            "agent": "pursuit_advocate_agent",
+            "recommendation": "nurture",
+            "confidence": 0.69,
+            "thesis": "The lead has enough upside to keep warm, but the current evidence does not justify fully autonomous sales outreach.",
+            "evidence_for": [
+              "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+              "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+              "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+              "Contact has strong buyer fit: Founder scored 17/20.",
+              "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear.",
+              "Founder can be a direct decision-maker.",
+              "Message shows potential marketing need.",
+              "Budget and timing are uncertain.",
+              "Industry can fit a marketing agency, but size and budget are uncertain.",
+              "Potential need exists, but urgency is weak."
+            ],
+            "evidence_against": [
+              "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+              "Risk penalty applied: -14 points."
+            ],
+            "risk_notes": [
+              "Small team may not have retainer budget.",
+              "Buying intent is exploratory rather than urgent."
+            ]
+          },
+          "dissenting_positions": [
+            {
+              "agent": "risk_skeptic_agent",
+              "recommendation": "human_review",
+              "confidence": 0.7,
+              "thesis": "The lead has commercial upside, but risk signals are strong enough that a human should review before any outreach.",
+              "evidence_for": [
+                "Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent.",
+                "Risk penalty applied: -14 points.",
+                "Budget or timing is uncertain."
+              ],
+              "evidence_against": [
+                "Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25.",
+                "Company size suggests possible retainer budget: 24 employees scored 10/20.",
+                "Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+                "Contact has strong buyer fit: Founder scored 17/20.",
+                "Pain signals found: Founder says they may need help improving marketing.; Budget and timing are not yet clear."
+              ],
+              "risk_notes": [
+                "Small team may not have retainer budget.",
+                "Buying intent is exploratory rather than urgent."
+              ]
+            }
+          ],
+          "requires_human_review": false,
+          "human_review_reason": null
+        },
+        "recorded_dissent": [
+          {
+            "agent": "risk_skeptic_agent",
+            "recommendation": "human_review",
+            "confidence": 0.7,
+            "thesis": "The lead has commercial upside, but risk signals are strong enough that a human should review before any outreach."
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.721222Z",
+      "actor": "orchestrator",
+      "action": "outreach_skipped",
+      "summary": "Outreach was not drafted because final disposition was nurture.",
+      "data": {
+        "final_disposition": "nurture",
+        "requires_human_review": false,
+        "human_review_reason": null
+      }
+    },
+    {
+      "timestamp": "2026-06-11T18:23:41.721537Z",
+      "actor": "crm_hygiene_agent",
+      "action": "crm_record_upserted",
+      "summary": "CRM record written with stage nurture and disposition nurture.",
+      "data": {
+        "lead_id": "lead_ecommerce_nurture",
+        "contact_name": "Lina Park",
+        "email": "lina@glowcart.co",
+        "company_name": "GlowCart",
+        "role_title": "Founder",
+        "disposition": "nurture",
+        "deal_stage": "nurture",
+        "score": 55,
+        "confidence": 0.69,
+        "human_review_flag": false,
+        "human_review_reason": null,
+        "notes": [
+          "Lead score: 55/100.",
+          "Lead Intelligence proposed: nurture with confidence 0.69.",
+          "Final resolution: nurture with confidence 0.69.",
+          "Resolution rationale: The lead has plausible fit but not enough urgency or confidence for autonomous first-touch outreach.",
+          "Winning debate position: pursuit_advocate_agent recommended nurture with confidence 0.69.",
+          "Recorded dissent: risk_skeptic_agent recommended human_review with confidence 0.7.",
+          "Positive evidence: Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25. | Company size suggests possible retainer budget: 24 employees scored 10/20. | Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+          "Negative evidence: Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent. | Risk penalty applied: -14 points.",
+          "Uncertainty: Budget or timing is uncertain.",
+          "No outreach drafted because final disposition was not pursue."
+        ],
+        "outreach": null
+      }
+    }
+  ]
+}

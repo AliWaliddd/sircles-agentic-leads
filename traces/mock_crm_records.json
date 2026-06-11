@@ -1,0 +1,117 @@
+[
+  {
+    "lead_id": "lead_saas_pursue",
+    "contact_name": "Maya Chen",
+    "email": "maya.chen@northstaranalytics.com",
+    "company_name": "Northstar Analytics",
+    "role_title": "VP of Growth",
+    "disposition": "pursue",
+    "deal_stage": "qualified",
+    "score": 99,
+    "confidence": 0.91,
+    "human_review_flag": false,
+    "human_review_reason": null,
+    "notes": [
+      "Lead score: 99/100.",
+      "Lead Intelligence proposed: pursue with confidence 0.88.",
+      "Final resolution: pursue with confidence 0.91.",
+      "Resolution rationale: The lead has a high ICP score, strong confidence, and no meaningful risk penalty. The advocate's pursue case outweighs the skeptic's caution.",
+      "Winning debate position: pursuit_advocate_agent recommended pursue with confidence 0.93.",
+      "Recorded dissent: risk_skeptic_agent recommended nurture with confidence 0.52.",
+      "Positive evidence: Industry fit is strong: B2B SaaS analytics scored 25/25. | Company size suggests possible retainer budget: 180 employees scored 20/20. | Growth signals found: Expanding into two new markets.; Hiring for sales and customer success roles.; Recently launched an enterprise analytics package.",
+      "Outreach draft created but not sent."
+    ],
+    "outreach": {
+      "subject": "Maya, growth support for Northstar Analytics",
+      "email_body": "Hi Maya,\n\nI noticed that Northstar Analytics is working through a growth moment: expanding into two new markets.\n\nYour note about needing positioning support stood out because those are exactly the kinds of situations where a focused agency partner can help clarify positioning, prioritize campaigns, and turn early demand signals into a repeatable acquisition motion.\n\nGiven your role as VP of Growth, I thought it may be useful to compare notes on what you are trying to solve and whether Sircles could help.\n\nWould you be open to a short conversation next week?\n\nBest,\nSircles Team",
+      "linkedin_note": "Hi Maya, saw that Northstar Analytics is focused on positioning support. Thought it could be useful to connect and compare notes on growth strategy.",
+      "grounded_in": [
+        "Contact role: VP of Growth",
+        "Company industry: B2B SaaS analytics",
+        "Company size: 180 employees",
+        "Growth signal: Expanding into two new markets.",
+        "Pain signal: Needs positioning support.",
+        "Resolved disposition: pursue"
+      ]
+    }
+  },
+  {
+    "lead_id": "lead_competitor_ambiguous",
+    "contact_name": "Daniel Reeves",
+    "email": "daniel@brightbridgegrowth.com",
+    "company_name": "BrightBridge Growth",
+    "role_title": "Founder",
+    "disposition": "human_review",
+    "deal_stage": "human_review",
+    "score": 39,
+    "confidence": 0.73,
+    "human_review_flag": true,
+    "human_review_reason": "Company appears to be a competing agency; normal autonomous outreach could create reputational or information-leakage risk.",
+    "notes": [
+      "Lead score: 39/100.",
+      "Lead Intelligence proposed: human_review with confidence 0.57.",
+      "Final resolution: human_review with confidence 0.73.",
+      "Resolution rationale: Hard risk veto overrode the opportunity case. The lead may have partnership value, but it should not receive normal automated sales outreach.",
+      "Winning debate position: risk_skeptic_agent recommended human_review with confidence 0.9.",
+      "Recorded dissent: pursuit_advocate_agent recommended nurture with confidence 0.58.",
+      "Human review reason: Company appears to be a competing agency; normal autonomous outreach could create reputational or information-leakage risk.",
+      "Positive evidence: Industry fit is strong: Marketing agency scored 22/25. | Company size suggests possible retainer budget: 35 employees scored 10/20. | Growth signals found: Works with B2B clients.; Founder is exploring partnerships.",
+      "Negative evidence: Risk signals found: Company appears to be a competing marketing agency.; Outreach could reveal positioning or sales process to a competitor.; Partnership intent is ambiguous. | Company appears to be a competing marketing agency, creating conflict and information-leakage risk. | Risk penalty applied: -25 points.",
+      "Uncertainty: The lead may be a competitor or partnership inquiry rather than a normal buying opportunity.",
+      "No outreach drafted because final disposition was not pursue."
+    ],
+    "outreach": null
+  },
+  {
+    "lead_id": "lead_student_skip",
+    "contact_name": "Omar Nasser",
+    "email": "omar.nasser@example.com",
+    "company_name": "Omar Portfolio",
+    "role_title": "Student",
+    "disposition": "skip",
+    "deal_stage": "disqualified",
+    "score": 0,
+    "confidence": 0.84,
+    "human_review_flag": false,
+    "human_review_reason": null,
+    "notes": [
+      "Lead score: 0/100.",
+      "Lead Intelligence proposed: skip with confidence 0.84.",
+      "Final resolution: skip with confidence 0.84.",
+      "Resolution rationale: The lead is a clear poor fit with high confidence. The cost of a false pursue is higher than the small chance of future opportunity.",
+      "Winning debate position: risk_skeptic_agent recommended skip with confidence 0.85.",
+      "Recorded dissent: pursuit_advocate_agent recommended nurture with confidence 0.42.",
+      "Positive evidence: Pain signals found: Wants more followers for a personal portfolio.",
+      "Negative evidence: Contact role has weak buyer fit: Student. | Company appears too small to be a qualified agency retainer lead. | Risk signals found: No evidence of company budget.; Not a qualified business lead.; Request appears to be free advice rather than agency buying intent.",
+      "Uncertainty: No company website was available in enrichment. | Revenue estimate is unavailable. | No clear growth trigger was found.",
+      "No outreach drafted because final disposition was not pursue."
+    ],
+    "outreach": null
+  },
+  {
+    "lead_id": "lead_ecommerce_nurture",
+    "contact_name": "Lina Park",
+    "email": "lina@glowcart.co",
+    "company_name": "GlowCart",
+    "role_title": "Founder",
+    "disposition": "nurture",
+    "deal_stage": "nurture",
+    "score": 55,
+    "confidence": 0.69,
+    "human_review_flag": false,
+    "human_review_reason": null,
+    "notes": [
+      "Lead score: 55/100.",
+      "Lead Intelligence proposed: nurture with confidence 0.69.",
+      "Final resolution: nurture with confidence 0.69.",
+      "Resolution rationale: The lead has plausible fit but not enough urgency or confidence for autonomous first-touch outreach.",
+      "Winning debate position: pursuit_advocate_agent recommended nurture with confidence 0.69.",
+      "Recorded dissent: risk_skeptic_agent recommended human_review with confidence 0.7.",
+      "Positive evidence: Industry fit is plausible but not perfect: E-commerce beauty brand scored 18/25. | Company size suggests possible retainer budget: 24 employees scored 10/20. | Growth signals found: Direct-to-consumer brand with active product catalog.; Recent social campaigns show inconsistent messaging.",
+      "Negative evidence: Risk signals found: Small team may not have retainer budget.; Buying intent is exploratory rather than urgent. | Risk penalty applied: -14 points.",
+      "Uncertainty: Budget or timing is uncertain.",
+      "No outreach drafted because final disposition was not pursue."
+    ],
+    "outreach": null
+  }
+]
